@@ -7,8 +7,10 @@ function  ProductProvider(props) {
     
     const [values,setValues] = useState({
         // screen: 'loading',
-        screen: 'selectProject',
+        screen: 'dashboard',
+        // screen: 'selectProject',
         // screen: 'createProject',
+        projectName:'untitled',
     })
 
   

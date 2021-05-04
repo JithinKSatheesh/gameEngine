@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import { ProductConsumer } from './Context';
-// import { BoxLoading } from 'react-loadingg';
+import {Ellipsis } from 'react-load-animations';
 
 
 export default function Loading(props) {
@@ -17,7 +17,7 @@ export default function Loading(props) {
                 setProgress(progress + 10)
             }
             if (seconds === 0) {
-                trigger('createProject')
+                trigger('selectProject')
                 clearInterval(timer)
             }
             
@@ -37,6 +37,9 @@ export default function Loading(props) {
                     <div className="space-100"></div>
                     <div className="space-100"></div>
                     <div className="text-center text-white h2">
+                    <div className="text-center">
+                        <Ellipsis />
+                    </div>
                     Loading assets... {progress} %
                     </div>
                     <div className="space-100"></div>

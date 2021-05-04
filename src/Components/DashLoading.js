@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import { ProductConsumer } from './Context';
-// import { BoxLoading } from 'react-loadingg';
+import {Ripple } from 'react-load-animations';
 
 
 export default function Dashloading(props) {
@@ -17,7 +17,7 @@ export default function Dashloading(props) {
                 setProgress(progress + 10)
             }
             if (seconds === 0) {
-                trigger('createProject')
+                trigger('dashboard')
                 clearInterval(timer)
             }
             
@@ -32,17 +32,19 @@ export default function Dashloading(props) {
                 <div className="container">
                     <div className="space-100"></div>
                     <div className="text-center display-1 text-white">
-                        GAME  ENGINE
+                        GAME ENGINE
                     </div>
                     <div className="space-100"></div>
-                    <div className="space-100"></div>
                     <div className="text-center text-white h2">
-                    Loading assets... {progress} %
+                    <div className="text-center">
+                    <Ripple width={100} height={100} />
+                    </div>
+                    Preparing dashboard... {progress} %
                     </div>
                     <div className="space-100"></div>
                     <div className="loading-container">
                         <div className="progress">
-                            <div className="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style={{ width: `${progress}%` }} ></div>
+                            <div className="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style={{ width: `${progress}%` }} ></div>
                         </div>
                     </div>
                 </div>
