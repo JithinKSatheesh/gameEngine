@@ -82,12 +82,15 @@ const RenderForm = ()=>{
                             </div>
                             <div className="space-50"></div>
                             <ProductConsumer>
-                                {(value)=>{
+                                {(consumer)=>{
                                     return(
                                         <>
                                         <div 
                                             onClick={()=>{
-                                                value.changeScreen('dashloading')
+                                                consumer.createNewProject({
+                                                    name : values.name,
+                                                    type:values.type,
+                                                })
                                             }}
                                             className="btn btn-dark">
                                             Create

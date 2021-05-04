@@ -59,7 +59,7 @@ body{
 /* =========================== */
 .toolbox{
   width: 50px;
-  background-color: #1f2940;
+  background-color: #333333;
   box-shadow: 0px 0px 10px 10px rgb(24, 24, 24);
 
 }
@@ -88,7 +88,7 @@ body{
 /* =========================== */
 .gameobjectbox{
   width: 100%;
-  background-color: #1f2940;
+  background-color: #212529;
   box-shadow: 0px 0px 10px 10px rgb(24, 24, 24);
   max-width: 960px;
   min-height: 170px;
@@ -96,7 +96,7 @@ body{
 }
 
 .object{
-  background-color: #1b1d1f;
+  background-color: #2f3441;
   cursor: pointer;
 }
 
@@ -109,9 +109,17 @@ body{
   width: 100%;
   max-width: 300px;
   min-height:450px;
-  background-color: #1f2940;
+  max-height:450px;
+  background-color:#212529;
   box-shadow: 0px 0px 10px 10px rgb(24, 24, 24);
   overflow-y: scroll;
+}
+
+.input-s1{
+  background-color: #1b1d1f;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
 }
 
 /* =========================== */
@@ -119,8 +127,9 @@ body{
   width: 100%;
   max-width: 360px;
   min-height: 170px;
+  max-height: 170px;
   overflow-y: scroll;
-  background-color: #1f2940;
+  background-color:#212529;
   box-shadow: 0px 0px 10px 10px rgb(24, 24, 24);
 }
 
