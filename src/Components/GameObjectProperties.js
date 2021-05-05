@@ -110,6 +110,25 @@ const RenderForm=({initialvalues})=>{
                                 type="text" 
                                 className="input-s1"/>
                         </div>
+                       
+                        {/* ========================== */}
+                        <div className="col-6 p-1">
+                            <input 
+                                // onChange={handleChange('health')}
+                                // value={inputVal.events.health}
+                                placeholder={'custom property'}
+                                type="text" 
+                                className="input-s1"/>
+                        </div>
+                        <div className="col-6 p-1">
+                            <input 
+                                // onChange={handleChange('health')}
+                                // value={inputVal.events.health}
+                                placeholder={'write javascript logic'}
+                                type="text" 
+                                className="input-s1"/>
+                        </div>
+                        {/* ========================== */}
                         <div className="col-6 p-1">Character image :</div>
                         <div className="col-6 p-1">
                             <input 
@@ -117,11 +136,12 @@ const RenderForm=({initialvalues})=>{
                                 type="file" 
                                 className="input-s1"/>
                         </div>
-                        <div className="col-6">
+                        <div className="col-12 ">
                             <img 
-                                style={{height:'50px'}}
+                                style={{height:'50px',borderRadius:'3px'}}
                                 src={inputVal.backgroundImage} alt=""/>
                         </div>
+                        
 
                         {/* ========================== */}
                         <div className="col-6 p-1">

@@ -8,6 +8,7 @@ import Loading from './Components/Loading'
 import Project from './Components/Project'
 import ProjectNew from './Components/ProjectNew'
 import LoadingDash from './Components/DashLoading'
+import LoadingExport from './Components/LoadingExport'
 import Dashboard from './Components/Dashboard'
 
 
@@ -25,6 +26,7 @@ function App() {
             {values.screen === 'createProject' && <ProjectNew/> }
             {values.screen === 'dashloading' &&  <LoadingDash trigger={values.changeScreen} />}
             {values.screen === 'dashboard' &&  <Dashboard/>}
+            {values.screen === 'exportload' &&  <LoadingExport trigger={values.changeScreen}/>}
             </>
           )
         }}

@@ -31,7 +31,11 @@ export default function Dashboard(props) {
                                             <div className="d-flex">
                                                 <div className="btn btn-success">Save</div>
                                                 &nbsp;
-                                                <div className="btn btn-danger">Export</div>
+                                                <div 
+                                                    onClick={()=>{
+                                                        values.changeScreen('exportload')
+                                                    }}
+                                                    className="btn btn-danger">Export</div>
                                             </div>
                                         </div>
                                     </div>

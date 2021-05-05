@@ -124,6 +124,24 @@ const RenderForm=({initialvalues})=>{
                                 className="input-s1"/>
                         </div>
                     {/* ========================== */}
+                    {/* ========================== */}
+                        <div className="col-6 p-1">
+                            <input 
+                                // onChange={handleChange('health')}
+                                // value={inputVal.events.health}
+                                placeholder={'custom script'}
+                                type="text" 
+                                className="input-s1"/>
+                        </div>
+                        <div className="col-6 p-1">
+                            <input 
+                                // onChange={handleChange('health')}
+                                // value={inputVal.events.health}
+                                placeholder={'write javascript logic'}
+                                type="text" 
+                                className="input-s1"/>
+                        </div>
+                    {/* ========================== */}
                   
 
                     </div>

@@ -38,9 +38,7 @@ body{
   border-radius: 30px;
 }
 
-.loading-container{
 
-}
 
 .dashboard{
   background-color: #252526;
@@ -162,3 +160,8 @@ body{
   box-shadow: 0px 0px 10px 10px rgb(24, 24, 24);
 }
 
+
+.loading-container-1{
+  background-color:#333333;
+  box-shadow: 0px 0px 10px 10px rgb(24, 24, 24);
+}
