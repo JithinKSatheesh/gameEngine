@@ -96,7 +96,7 @@ const RenderForm=({initialvalues})=>{
                                     <option value='destroy'>Destroy</option>
                                     <option value='decrease health'>Decrease Health</option>
                                     <option value='no action'>no action</option>
-                                    <option value='destroy'>Game over</option>
+                                    <option value='game over'>Game over</option>
                             </select>
                         </div>
                     {/* ========================== */}
@@ -110,6 +110,8 @@ const RenderForm=({initialvalues})=>{
                                 className="input-s1">
                                     <option value='keyboard'>Keyboard arrow</option>
                                     <option value='mouse'>Mouse pointer</option>
+                                    <option value='bounce'>Bounce</option>
+                                    <option value='random'>Random</option>
                                     <option value='no action'>no action</option>
                             </select>
                         </div>

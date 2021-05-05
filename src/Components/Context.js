@@ -6,10 +6,10 @@ const ProductContext = React.createContext()
 function  ProductProvider(props) {
     
     const [values,setValues] = useState({
-        // screen: 'loading',
+        screen: 'loading',
         // screen: 'selectProject',
         // screen: 'createProject',
-        screen: 'dashboard',
+        // screen: 'dashboard',
         projectName:'untitled',
         type:'2D',
         objectlist : [
