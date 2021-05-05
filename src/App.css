@@ -86,8 +86,8 @@ body{
   width: 100%;
   min-width: 400px;
   max-width: 950px;
-  min-height: 450px;
-  max-height: 450px;
+  min-height: 400px;
+  max-height: 400px;
   box-shadow: 0px 0px 10px 10px rgb(24, 24, 24);
   overflow-y: scroll;
 }
@@ -99,12 +99,12 @@ body{
   box-shadow: 0px 0px 10px 10px rgb(24, 24, 24);
   max-width: 400px;
   min-height: 150px;
-  max-height: 150px;
+  max-height: 250px;
   
 }
 
 .gameobjectboxFlow{
-  height: 100px;
+  height: 150px;
   overflow-y: scroll;
 }
 
@@ -121,13 +121,27 @@ body{
 .gameobjectproperty{
   width: 100%;
   max-width: 300px;
-  min-height:450px;
+  min-height:400px;
   max-height:450px;
   background-color:#333333;
   box-shadow: 0px 0px 10px 10px rgba(24, 24, 24, 0.324);
   overflow-y: scroll;
 }
 
+.GameObjectPhysicsProperties{
+  width: 100%;
+  /* max-width: 300px; */
+  min-height:150px;
+  max-height:250px;
+  background-color:#333333;
+  box-shadow: 0px 0px 10px 10px rgba(24, 24, 24, 0.324);
+  
+}
+
+.GameObjectPhysicsPropertiesBox{
+  overflow-y: scroll;
+  height: 100px;
+}
 
 .input-s1{
   background-color: #1b1d1f;
@@ -138,11 +152,11 @@ body{
 }
 
 /* =========================== */
-.uploadassets{
+.GameEventProperties{
   width: 100%;
   max-width: 360px;
   min-height: 150px;
-  max-height: 150px;
+  max-height: 250px;
   overflow-y: scroll;
   background-color:#333333;
   box-shadow: 0px 0px 10px 10px rgb(24, 24, 24);

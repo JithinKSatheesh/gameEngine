@@ -10,10 +10,26 @@ export default function  Toolbox(){
             inputObject :{
                 id:'3',
                 name:'rectangle',
-                height:'300',
-                width:'300',
+                height:'200',
+                width:'200',
                 backgroundColor:'#53caf0',
-                borderRadius:'0'
+                borderRadius:'0',
+                backgroundImage:'',
+                physics:{
+                    leftbound: -1000,
+                    rightbound: 1000,
+                    topbound:-1000,
+                    bottombound:1000,
+                    friction:'20',
+                    weight:'40',
+                },
+                events:{
+                    onCollision:'',
+                    collisionWith:'',
+                    health:'',
+                    movement:'',
+    
+                },
             },
         },
         {
@@ -22,10 +38,26 @@ export default function  Toolbox(){
             inputObject :{
                 id:'3',
                 name:'circle',
-                height:'300',
-                width:'300',
+                height:'200',
+                width:'200',
                 backgroundColor:'#53caf0',
-                borderRadius:'50%'
+                backgroundImage:'',
+                borderRadius:'50%',
+                physics:{
+                    leftbound: -1000,
+                    rightbound: 1000,
+                    topbound:-1000,
+                    bottombound:1000,
+                    friction:'20',
+                    weight:'40',
+                },
+                events:{
+                    onCollision:'',
+                    collisionWith:'',
+                    health:'',
+                    movement:'',
+    
+                },
             }
         },
         {
@@ -34,10 +66,26 @@ export default function  Toolbox(){
             inputObject :{
                 id:'3',
                 name:'rectangle',
-                height:'300',
-                width:'300',
+                height:'200',
+                width:'200',
                 backgroundColor:'#53caf0',
-                borderRadius:'0'
+                backgroundImage:'',
+                borderRadius:'0',
+                physics:{
+                    leftbound: -1000,
+                    rightbound: 1000,
+                    topbound:-1000,
+                    bottombound:1000,
+                    friction:'20',
+                    weight:'40',
+                },
+                events:{
+                    onCollision:'',
+                    collisionWith:'',
+                    health:'',
+                    movement:'',
+    
+                },
             }
         },
         {
@@ -46,10 +94,25 @@ export default function  Toolbox(){
             inputObject :{
                 id:'3',
                 name:'rectangle',
-                height:'300',
-                width:'300',
+                height:'200',
+                width:'200',
                 backgroundColor:'#53caf0',
                 borderRadius:'0',
+                physics:{
+                    leftbound: -1000,
+                    rightbound: 1000,
+                    topbound:-1000,
+                    bottombound:1000,
+                    friction:'20',
+                    weight:'40',
+                },
+                events:{
+                    onCollision:'',
+                    collisionWith:'',
+                    health:'',
+                    movement:'',
+    
+                },
             }
         },
     ]

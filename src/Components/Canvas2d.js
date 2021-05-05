@@ -15,11 +15,26 @@ export default function Canvas2D(){
                         return(
                             <>
                             {values.objectlist.map(item=>(
-                                <Draggable>
+                                <Draggable 
+                                   bounds={{
+                                       left: parseInt(item.physics.leftbound),
+                                       right: parseInt(item.physics.rightbound),
+                                       top: parseInt(item.physics.topbound),
+                                       bottom: parseInt(item.physics.bottombound),
+                                    
+                                    }} 
+                                >
                                     <div  
                                         onClick={()=>{ values.setSelectedObject(item.id)}}
-                                        
-                                        style={{width:`${item.width}px`, height:`${item.height}px`,backgroundColor:`${item.backgroundColor}`, borderRadius:`${item.borderRadius}`}}>
+                                        style={{
+                                            width:`${item.width}px`,
+                                            height:`${item.height}px`,
+                                            backgroundColor:`${item.backgroundColor}`, 
+                                            borderRadius:`${item.borderRadius}`,
+                                            backgroundImage:`url(${item.backgroundImage})`,
+                                            backgroundSize:'contain',
+                                            backgroundRepeat:'no-repeat',
+                                            }}>
                                         {item.name}  {item.id} 
                                     </div>
                                 </Draggable>

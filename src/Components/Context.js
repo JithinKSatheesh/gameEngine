@@ -19,13 +19,7 @@ function  ProductProvider(props) {
             //     height:'200',
             //     width:'200',
             //     backgroundColor:'#53caf0',
-            // },
-            // {
-            //     id:'2',
-            //     name:'rectangle',
-            //     height:'100',
-            //     width:'100',
-            //     backgroundColor:'#833997',
+            //     phyiscs:{}
             // },
         
         ],
@@ -35,6 +29,17 @@ function  ProductProvider(props) {
             // height:'300',
             // width:'300',
             // backgroundColor:'#833997',
+            physics:{
+                leftbound: 100,
+                rightbound: 100,
+            },
+            events:{
+                onCollision:'',
+                collisionWith:'',
+                health:'',
+                movement:'',
+
+            }
         },
     })
 

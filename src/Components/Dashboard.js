@@ -6,8 +6,9 @@ import {ProductConsumer} from './Context'
 import Toolbox from './ToolBox'
 import Canvas2D from './Canvas2d'
 import GameObjectProperties from './GameObjectProperties'
+import GameObjectPhysicsProperties from './GameObjectPhysicsProperties'
 import GameObjectList2D from './GameObjectList2D'
-import UploadAssets from './UploadAssets'
+import GameEventProperties from './GameEventProperties'
 
 
 export default function Dashboard(props) {
@@ -44,7 +45,8 @@ export default function Dashboard(props) {
                                     </div>
                                     <div className="d-flex">
                                         <GameObjectList2D />
-                                        <UploadAssets />
+                                        <GameEventProperties />
+                                        <GameObjectPhysicsProperties/>
                                     </div>
                                 </div>
 
