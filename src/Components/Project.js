@@ -23,28 +23,32 @@ export default function Project(props) {
     return (
         <>
         <div className="space-50"></div>
-        <div  className="container p-3">
+        <div  className="container p-3 text-light">
             <div style={{backgroundColor:'#e6e6e627'}}  className="project p-2">
                 <div className="space-50"></div>
                 <div className="bg- radius-1">
-                    <div className="text-white p-2 h4">
+                    <div className="text-white p-2 h4 text-center">
                         Create a project
                     </div>
                 </div>
                 <div className="space-20"></div>
-                <div className="p-2">
-                    <ProductConsumer>
-                        {(value)=>{
-                            return(
-                                <span onClick={()=>value.changeScreen('createProject')}>
-                                <BoxButton text={<Plus/>}  />
-                                </span>
-                            )
-                        }}
-                    </ProductConsumer>
+                <div className="d-flex justify-content-center">
+                    <div className="p-2">
+                        <ProductConsumer>
+                            {(value)=>{
+                                return(
+                                    <span onClick={()=>value.changeScreen('createProject')}>
+                                    <BoxButton text={<Plus/>}  />
+                                    </span>
+                                )
+                            }}
+                        </ProductConsumer>
+                    </div>
                 </div>
                 <div className="space-20"></div>
-                <div className="bg- radius-1">
+                <div className="space-5 bg-dark"></div>
+                <div className="space-20"></div>
+                <div className="">
                     <div className="text-white p-2 h4">
                         Open existing project
                     </div>
@@ -81,7 +85,7 @@ const Plus =()=>{
 const BoxButton = ({image,text})=>{
     return(
         <>
-        <div style={{backgroundImage:`url(${image})`}} className="BoxButton radius-2 p-4 m-2">
+        <div style={{backgroundImage:`url(${image})`}} className="BoxButton radius-1 p-4 m-2">
             <div className="space-20"></div>
             <div className="text-center text-white  radius-1 p-1">
                 {text}

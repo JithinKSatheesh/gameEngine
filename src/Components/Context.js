@@ -6,35 +6,35 @@ const ProductContext = React.createContext()
 function  ProductProvider(props) {
     
     const [values,setValues] = useState({
-        screen: 'loading',
+        // screen: 'loading',
         // screen: 'selectProject',
         // screen: 'createProject',
-        // screen: 'dashboard',
+        screen: 'dashboard',
         projectName:'untitled',
         type:'2D',
         objectlist : [
-            {
-                id:'1',
-                name:'rectangle',
-                height:'200',
-                width:'200',
-                backgroundColor:'#53caf0',
-            },
-            {
-                id:'2',
-                name:'rectangle',
-                height:'100',
-                width:'100',
-                backgroundColor:'#833997',
-            },
+            // {
+            //     id:'1',
+            //     name:'rectangle',
+            //     height:'200',
+            //     width:'200',
+            //     backgroundColor:'#53caf0',
+            // },
+            // {
+            //     id:'2',
+            //     name:'rectangle',
+            //     height:'100',
+            //     width:'100',
+            //     backgroundColor:'#833997',
+            // },
         
         ],
         selectedObject : {
-            id:'2',
-            name:'rectangle',
-            height:'300',
-            width:'300',
-            backgroundColor:'#833997',
+            // id:'2',
+            // name:'rectangle',
+            // height:'300',
+            // width:'300',
+            // backgroundColor:'#833997',
         },
     })
 
@@ -48,6 +48,7 @@ function  ProductProvider(props) {
     }
 
     const insertNewObject=(newItem)=>{
+        newItem.id = values.objectlist.length + 1
         setValues({
             ...values,
             objectlist:[...values.objectlist,newItem]
@@ -66,12 +67,33 @@ function  ProductProvider(props) {
         console.log("changing screen",name,type)
     }
 
+    const setSelectedObject = (id)=>{
+        const selected = values.objectlist.find((ele=> (ele.id === id)))
+        // console.log(selected)
+        setValues({
+            ...values,
+            selectedObject:selected,
+        })
+    }
+
+    const updateSelectedObject = (item)=>{
+        const index = values.objectlist.findIndex(obj=>obj.id === item.id)
+        const newArray = values.objectlist
+        newArray[index] = item
+        setValues({
+            ...values,
+            objectlist:newArray
+        })
+    }
+
     return (
         <ProductContext.Provider value={{
             ...values,
             changeScreen:changeScreen,
             insertNewObject:insertNewObject,
             createNewProject,createNewProject,
+            setSelectedObject:setSelectedObject,
+            updateSelectedObject:updateSelectedObject,
         }}>
             {props.children}
         </ProductContext.Provider>

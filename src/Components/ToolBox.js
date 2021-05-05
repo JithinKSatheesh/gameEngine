@@ -54,7 +54,7 @@ export default function  Toolbox(){
         },
     ]
     return (
-        <div className="toolbox p-1 radius-1">
+        <div className="toolbox p-1 radius-0 m-1">
             <div className="space-20"></div>
             <ProductConsumer>
                 {values=>{

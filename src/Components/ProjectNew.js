@@ -16,8 +16,8 @@ export default function ProjectNew(props) {
     return (
         <>
         <div className="space-50"></div>
-        <div  className="container p-3">
-            <div style={{backgroundColor:'#e6e6e627'}}  className="project p-2">
+        <div  className="container p-3 ">
+            <div style={{backgroundColor:'#e6e6e627'}}  className="project p-4">
                 <div className="space-50"></div>
                 <div className="bg- radius-1">
                     <div className="text-white p-2 h4">
@@ -76,8 +76,8 @@ const RenderForm = ()=>{
                                     >
                                     <option value="2D">2D</option>
                                     <option value="3D">3D</option>
-                                    <option value="m2D">Multiplayer (2D)</option>
-                                    <option value="m3D">Multiplayer (3D)</option>
+                                    {/* <option value="m2D">Multiplayer (2D)</option>
+                                    <option value="m3D">Multiplayer (3D)</option> */}
                                 </select>
                             </div>
                             <div className="space-50"></div>
@@ -89,11 +89,22 @@ const RenderForm = ()=>{
                                             onClick={()=>{
                                                 consumer.createNewProject({
                                                     name : values.name,
-                                                    type:values.type,
+                                                    type: `${values.type}`,
                                                 })
                                             }}
                                             className="btn btn-dark">
-                                            Create
+                                            Create Single player
+                                        </div>
+                                        &nbsp;
+                                        <div 
+                                            onClick={()=>{
+                                                consumer.createNewProject({
+                                                    name : values.name,
+                                                    type: `m${values.type}`,
+                                                })
+                                            }}
+                                            className="btn btn-dark">
+                                            Create Multyplayer
                                         </div>
                                         </>
                                     )

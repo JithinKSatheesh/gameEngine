@@ -20,7 +20,7 @@ export default function Dashboard(props) {
                     {(values) => {
                         return (
                             <>
-                                <div className="dashboard bg-dark text-white p-3 m-2 radius-3">
+                                <div className="dashboard text-white p-3 m-2 radius-1">
                                     <div className="space-10"></div>
                                     <div className="d-flex justify-content-between">
                                         <div className="h3">

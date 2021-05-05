@@ -5,7 +5,7 @@ import {Ellipsis } from 'react-load-animations';
 
 export default function Loading(props) {
 
-    const { initialSeconds = 10,trigger} = props;
+    const { initialSeconds = 1,trigger} = props;
 
     const [progress,setProgress] = useState(0)
     const [seconds, setSeconds ] =  useState(initialSeconds);
@@ -14,7 +14,7 @@ export default function Loading(props) {
         const timer = setInterval(() => {
             if (seconds > 0) {
                 setSeconds(seconds - 1);
-                setProgress(progress + 10)
+                setProgress(progress + 100)
             }
             if (seconds === 0) {
                 trigger('selectProject')
