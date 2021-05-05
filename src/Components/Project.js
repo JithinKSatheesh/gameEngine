@@ -49,11 +49,11 @@ export default function Project(props) {
                 <div className="space-5 bg-dark"></div>
                 <div className="space-20"></div>
                 <div className="">
-                    <div className="text-white p-2 h4">
+                    <div className="text-white p-2 h4 text-center">
                         Open existing project
                     </div>
                 </div>
-                <div className="d-flex">
+                <div className="d-flex justify-content-center">
                     {
                     existing.map((item,index) =>{
                         return(
@@ -85,7 +85,9 @@ const Plus =()=>{
 const BoxButton = ({image,text})=>{
     return(
         <>
-        <div style={{backgroundImage:`url(${image})`}} className="BoxButton radius-1 p-4 m-2">
+        <div 
+            // style={{backgroundImage:`url(${image})`}} 
+            className="BoxButton radius-1 p-4 m-2">
             <div className="space-20"></div>
             <div className="text-center text-white  radius-1 p-1">
                 {text}

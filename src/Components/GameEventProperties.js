@@ -43,7 +43,7 @@ const RenderForm=({initialvalues})=>{
     useEffect(()=>{
 
         setInputVal(initialvalues)
-        console.log(inputVal)
+        // console.log(inputVal)
 
     },[initialvalues])
     

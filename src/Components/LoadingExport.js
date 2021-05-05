@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import { ProductConsumer } from './Context';
 import {Ellipsis } from 'react-load-animations';
+import downloadFile from '../assets/game.zip'
 
 
 export default function LoadingExport(props) {
@@ -57,9 +58,11 @@ export default function LoadingExport(props) {
                                 </div>
                                 <div className="space-50"></div>
                                 <div className="text-center">
-                                    <div className="btn btn-success">
-                                        Download
-                                    </div>
+                                    <a href={downloadFile} download="game" target='_blank'>
+                                        <div className="btn btn-success">
+                                            Download
+                                        </div>
+                                    </a>
                                     &nbsp;
                                     <div 
                                         onClick={()=>{
