@@ -43,10 +43,6 @@ function  ProductProvider(props) {
             }
         },
     })
-
-    const [entities, setEntities] = useState([])
-    const [selectedEntity, setSelectedEntity] = useState({})
-
   
 
     const changeScreen=(input)=>{
@@ -97,6 +93,15 @@ function  ProductProvider(props) {
 
 
     // 3D functions
+
+    const [entities, setEntities] = useState([])
+    const [selectedEntity, setSelectedEntity] = useState({})
+    const [lightType, setLightType] = useState('ambient')
+    const [lightProperties, setLightProperties] = useState({ 
+                                                    type : 'ambient', 
+                                                    color : 0xffffff, 
+                                                    intensity : 1 })
+
     const createEntity = params => {
         const entity = new Entity(params)
         console.log("Creating new entity =======>", entity)
@@ -107,6 +112,42 @@ function  ProductProvider(props) {
 
     const updateSelectedEntity = params => {
         console.log("Entity to be updated with", params)
+    }
+
+    // Light
+    // Ambient Light
+    const lights = [
+        { type : 'ambient', obj : THREE.AmbientLight },
+        { type : 'hemis', obj : THREE.HemisphereLight },
+        { type : 'point', obj : THREE.PointLight },
+        { type : 'directional', obj : THREE.DirectionalLight },
+    ]
+    
+    
+    const setLight = (type) => {
+        const lightObj = lights.find(light => light.type === type).obj
+        let light
+        switch (type) {
+            case 'ambient':
+                light = new lightObj(0xffffff, 1)
+                break;
+            case 'hemis':
+                light = new lightObj(0xffffff, 0xB97A20, 1)
+                break
+            case 'point':
+                light = new lightObj(0xffffff, 1)
+                light.position.set(0, 20, 0)
+                break
+            case 'directional':
+                light = new lightObj(0xffffff, 1)
+                light.position.set(0, 20, 0)
+                light.target.position.set(-5, 0, 0)
+                break
+            default:
+                light = new THREE.AmbientLight(0xffffff, 1)
+                break;
+        }
+        return light
     }
 
 
@@ -120,6 +161,12 @@ function  ProductProvider(props) {
             setSelectedEntity : setSelectedEntity,
             createEntity : createEntity,
             updateSelectedEntity : updateSelectedEntity,
+            lightProperties : lightProperties,
+            setLightProperties : setLightProperties,
+            setLight : setLight,
+            lights : lights,
+            lightType : lightType,
+            setLightType : setLightType,
 
             // 2D
             changeScreen:changeScreen,

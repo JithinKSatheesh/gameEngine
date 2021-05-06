@@ -55,13 +55,8 @@ export default function Canvas3d(props) {
         })
 
         // Light
-        // Ambient Light
-        {
-            const intensity = 1,
-                    color = 0xffffff
-            const light = new THREE.AmbientLight(color, intensity)
-            scene.add(light)
-        }
+        const light = props.setLight(props.lightType)
+        scene.add(light)
 
         // Creating plane
         {

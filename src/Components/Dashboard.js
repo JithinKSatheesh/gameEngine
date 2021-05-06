@@ -13,6 +13,7 @@ import Toolbox3D from './3D/Toolbox3d'
 import ObjectList3D from './3D/ObjectList3D'
 import EventProperties3D from './3D/EventProperties3D'
 import ObjectProperties3D from './3D/ObjectProperties3D'
+import SelectLight from './3D/SelectLight'
 
 export default function Dashboard(props) {
 
@@ -49,7 +50,10 @@ export default function Dashboard(props) {
                                         {/*(values.type === '2D'||values.type === 'm2D') && <Toolbox /> */}
                                         {/*(values.type === '3D'||values.type === 'm3D') && <Toolbox3D /> */} 
                                         <Toolbox3D />
-                                        <Canvas3D entities={values.entities}/>
+                                        <Canvas3D entities={values.entities} 
+                                        setLight={values.setLight}
+                                        lightType={values.lightType}
+                                        lightProperties={values.lightProperties}/>
                                         {/*(values.type === '2D'||values.type === 'm2D') && <Canvas2D /> */} 
                                         {/*(values.type === '3D'||values.type === 'm3D') && <Canvas3D entities={[]}/> */} 
                                         {/*<GameObjectProperties />*/}
@@ -60,7 +64,8 @@ export default function Dashboard(props) {
                                         <ObjectList3D />
                                         {/*<GameEventProperties />*/}
                                         <EventProperties3D />
-                                        <GameObjectPhysicsProperties/>
+                                        {/*<GameObjectPhysicsProperties/>*/}
+                                        <SelectLight />
                                     </div>
                                 </div>
 
