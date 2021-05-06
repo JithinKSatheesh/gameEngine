@@ -12,7 +12,8 @@ export default function ObjectList3D() {
                 <ProductConsumer>
                     { value => (
                         value.entities.map(entity => (
-                            <div className="object radius-0 p-2 text-center m-1">
+                            <div onClick={() => value.setSelectedEntity(() => entity)}
+                            className="object radius-0 p-2 text-center m-1">
                                 { entity.name }
                             </div>
                         ) )

@@ -105,6 +105,11 @@ function  ProductProvider(props) {
         setEntities(() => gameObjs)
     }
 
+    const updateSelectedEntity = params => {
+        console.log("Entity to be updated with", params)
+    }
+
+
     return (
         <ProductContext.Provider value={{
             ...values,
@@ -114,6 +119,7 @@ function  ProductProvider(props) {
             selectedEntity : selectedEntity,
             setSelectedEntity : setSelectedEntity,
             createEntity : createEntity,
+            updateSelectedEntity : updateSelectedEntity,
 
             // 2D
             changeScreen:changeScreen,
@@ -146,6 +152,8 @@ let Entity = function Entity(params) {
 
     let {geometry, shape} = getGeometryShape(params);
 
+    console.log("Geometry of the object =====>", geometry)
+
     const body = new CANNON.Body({
         mass: mass,
         shape: shape,
@@ -158,7 +166,12 @@ let Entity = function Entity(params) {
     this.mesh.position.y = position.y;
     this.mesh.position.z = position.z;
     this.mesh.cannon_rigid_body = body;
+
+    // Object properties
     this.name = name;
+    this.type = params.type
+    this.color = color
+    this.parameters = geometry.parameters
 
     // world.add(body);
     // scene.add(this.mesh);

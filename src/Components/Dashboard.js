@@ -10,6 +10,9 @@ import GameEventProperties from './GameEventProperties'
 
 import Canvas3D from './3D/Canvas3d'
 import Toolbox3D from './3D/Toolbox3d'
+import ObjectList3D from './3D/ObjectList3D'
+import EventProperties3D from './3D/EventProperties3D'
+import ObjectProperties3D from './3D/ObjectProperties3D'
 
 export default function Dashboard(props) {
 
@@ -49,11 +52,14 @@ export default function Dashboard(props) {
                                         <Canvas3D entities={values.entities}/>
                                         {/*(values.type === '2D'||values.type === 'm2D') && <Canvas2D /> */} 
                                         {/*(values.type === '3D'||values.type === 'm3D') && <Canvas3D entities={[]}/> */} 
-                                        <GameObjectProperties />
+                                        {/*<GameObjectProperties />*/}
+                                        <ObjectProperties3D />
                                     </div>
                                     <div className="d-flex">
-                                        <GameObjectList2D />
-                                        <GameEventProperties />
+                                        {/*<GameObjectList2D />*/}
+                                        <ObjectList3D />
+                                        {/*<GameEventProperties />*/}
+                                        <EventProperties3D />
                                         <GameObjectPhysicsProperties/>
                                     </div>
                                 </div>

@@ -140,11 +140,8 @@ export default function Canvas3d(props) {
     })
 
     return (
-        <div className="canvas-2d radius-0 m-3 bg-white">
-            <div className="space-50"></div>
-            <div className="">
-                <canvas className="canvas-3d" ref={canvasRef} {...props} />
-            </div>
+        <div className="canvas-2d radius-0 m-3">
+            <canvas className="canvas-3d" ref={canvasRef} {...props} />
         </div>
     )
 }
