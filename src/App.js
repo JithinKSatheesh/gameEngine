@@ -21,12 +21,13 @@ function App() {
             <>
             hello
             {console.log(values)}
-            {values.screen === 'loading' && <Loading trigger={values.changeScreen} />}
-            {values.screen === 'selectProject' && <Project/> }
-            {values.screen === 'createProject' && <ProjectNew/> }
-            {values.screen === 'dashloading' &&  <LoadingDash trigger={values.changeScreen} />}
+            {/*values.screen === 'loading' && <Loading trigger={values.changeScreen} />*/}
+            {/*values.screen === 'selectProject' && <Project/> */}
+            {/*values.screen === 'createProject' && <ProjectNew/> */}
+            {/*values.screen === 'dashloading' &&  <LoadingDash trigger={values.changeScreen} />*/}
             {values.screen === 'dashboard' &&  <Dashboard/>}
-            {values.screen === 'exportload' &&  <LoadingExport trigger={values.changeScreen}/>}
+            <Dashboard />
+            {/*values.screen === 'exportload' &&  <LoadingExport trigger={values.changeScreen}/>*/}
             </>
           )
         }}

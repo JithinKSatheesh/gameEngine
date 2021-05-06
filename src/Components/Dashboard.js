@@ -1,8 +1,6 @@
 import React from 'react'
 import {ProductConsumer} from './Context'
 
-
-
 import Toolbox from './ToolBox'
 import Canvas2D from './Canvas2d'
 import GameObjectProperties from './GameObjectProperties'
@@ -10,6 +8,8 @@ import GameObjectPhysicsProperties from './GameObjectPhysicsProperties'
 import GameObjectList2D from './GameObjectList2D'
 import GameEventProperties from './GameEventProperties'
 
+import Canvas3D from './3D/Canvas3d'
+import Toolbox3D from './3D/Toolbox3d'
 
 export default function Dashboard(props) {
 
@@ -43,8 +43,12 @@ export default function Dashboard(props) {
                                     <div className="space-20"></div>
 
                                     <div className="d-flex">
-                                        <Toolbox />
-                                        {(values.type === '2D'||values.type === 'm2D') && <Canvas2D /> } 
+                                        {/*(values.type === '2D'||values.type === 'm2D') && <Toolbox /> */}
+                                        {/*(values.type === '3D'||values.type === 'm3D') && <Toolbox3D /> */} 
+                                        <Toolbox3D />
+                                        <Canvas3D entities={values.entities}/>
+                                        {/*(values.type === '2D'||values.type === 'm2D') && <Canvas2D /> */} 
+                                        {/*(values.type === '3D'||values.type === 'm3D') && <Canvas3D entities={[]}/> */} 
                                         <GameObjectProperties />
                                     </div>
                                     <div className="d-flex">

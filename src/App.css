@@ -90,6 +90,12 @@ body{
   overflow-y: scroll;
 }
 
+.canvas-3d {
+  width: 100%;
+  height: 100%;
+  display : block;
+}
+
 /* =========================== */
 .gameobjectbox{
   width: 100%;
